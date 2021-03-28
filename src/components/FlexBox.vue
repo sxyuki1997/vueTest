@@ -1,48 +1,42 @@
 <template>
-  <div id="app">
-    <!-- <div class="header"></div> -->
-    <h1 style="color: lightpink">808 四月值日表</h1>
-    <!-- <router-view/> -->
-    <!-- <img src="./assets/logo.png"> -->
-    <h3 style="color: grey">{{message}}</h3>
-    <!-- <flex-box></flex-box> -->
-    <grid-calender></grid-calender>
+  <div>
+    <div class="weibo-wrap">
+      <div class="profile">
+        <div src="./assets/logo.png"></div>
+        <div class="name">由纪昕昕子</div>
+        <div class="time">2021/3/26</div>
+      </div>
+      <div class="txt">今天解放自由啦！接下来指定完整的学习计划，
+        坚持去实验室，严格执行！</div>
+      <div class='wrap'>
+        <div class="list">test</div> 
+        <div class="list">test</div>
+        <div class="list">test</div>
+        <div class="list">test</div>
+        <div class="list">test</div>
+        <div class="list">test</div>
+        <div class="list">test</div>
+        <div class="list">test</div>
+        <div class="list">test</div>      
+      </div>
+    </div>
+
+
   </div>
 </template>
 
 <script>
-import FlexBox from './components/FlexBox'
-import GridCalender from './components/GridCalender'
 export default {
-  components: { FlexBox, GridCalender },
-  name: 'App',
+  name: 'FlexBox',
   data () {
     return {
-      message: '小可爱们加油一起打扫吧！',
-      list: [
-        'Foo',
-        'Bar'
-      ]
+      list: []
     } 
   }
 }
 </script>
 
 <style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 0px;
-
-}
-.header {
-  background-color: rgba(66, 9, 19, 0.233);
-  width: 100%;
-  height: 20px;
-}
 .weibo-wrap {
   height: 500px;
   width: 350px;
