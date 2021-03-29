@@ -27,8 +27,8 @@ export default {
 
 <style>
 .list {
-  width: 140px;
-  height: 140px;
+  width: 230px;
+  height: 230px;
   background-color:rgb(255, 221, 226);
   margin-left: 10px;
   margin-top: 10px; 
@@ -38,6 +38,10 @@ export default {
   justify-content: center;
   align-items: flex-start;
   overflow: hidden;
+  transition: flex .4s ease;
+}
+.list:hover {
+    flex: 2;
 }
 .month {
     width: 100%;
@@ -51,10 +55,9 @@ export default {
 .memo {
     width: 300px;
     height: 200px;
-    font-size: 38px;
+    font-size: 20px;
     margin-top: 10px;
-    color:rgb(175, 153, 252);
-    font-weight: 800;
+    color:rgb(83, 83, 83);
 
 }
 </style>

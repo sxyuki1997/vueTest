@@ -1,12 +1,26 @@
 <template>
   <div id="app">
-    <!-- <div class="header"></div> -->
-    <h1 style="color: lightpink">808 四月值日表</h1>
-    <!-- <router-view/> -->
-    <!-- <img src="./assets/logo.png"> -->
-    <h3 style="color: grey">{{message}}</h3>
-    <!-- <flex-box></flex-box> -->
-    <grid-calender></grid-calender>
+    <div class="header">
+      <h1 style="color: white;">2021年度计划！</h1>
+      <h2 style="color: white;"   >加油！</h2>
+    </div>
+    <div class="content">
+      <div class="left"></div>
+      <!-- <div class="header"></div> -->
+      <!-- <h1 style="color: lightpink; margin-top: 0px;" >808 四月值日表</h1> -->
+      <!-- <router-view/> -->
+      <!-- <img src="./assets/logo.png"> -->
+      <!-- <h3 style="color: grey">{{message}}</h3> -->
+      <!-- <flex-box></flex-box> -->
+      <div class="middle">
+        <grid-calender></grid-calender>
+      </div>
+      <div class="right"></div>
+    </div>
+    <div class="footer">
+      <h5 style="margin-top: 0px; color: white">为了能够有更好的基础加油！</h5>
+    </div>
+
   </div>
 </template>
 
@@ -36,13 +50,39 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 0px;
+}
 
-}
 .header {
-  background-color: rgba(66, 9, 19, 0.233);
+  background-color: rgba(240, 12, 54, 0.233);
   width: 100%;
-  height: 20px;
+  height: 200px;
 }
+.content {
+  width: 100%;
+  height: 100%;
+  background-color: linen;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex: wrap;
+}
+.left {
+  width: 200px;
+  height: 1000px;
+  /* background-color: rgb(255, 243, 218); */
+}
+.right {
+  width: 200px;
+  height: 1000px;
+  /* background-color: rgb(255, 243, 218); */
+  margin-right: 0px;
+}
+.middle {
+  width: 100%;
+  height: 1000px;
+  /* background-color: orange; */
+}
+
 .weibo-wrap {
   height: 500px;
   width: 350px;
@@ -91,7 +131,7 @@ export default {
   justify-content: flex-start;
   align-content: flex-start;
   flex-wrap: wrap;
-  background-color: antiquewhite;
+  /* background-color: antiquewhite; */
 }
 .list {
   width: 100px;
@@ -99,5 +139,10 @@ export default {
   background-color:darkgray;
   margin-left: 10px;
   margin-top: 10px;
+}
+.footer {
+  width: 100%;
+  height: 100px;
+  background-color: rgb(126, 126, 125);
 }
 </style>

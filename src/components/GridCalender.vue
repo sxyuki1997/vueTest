@@ -1,12 +1,8 @@
 <template>
 <div class="calender">
     <div class='wrap'>
-        <div v-for="date in dates" :key="date">
-            <date 
-                :date="date.week">
-            </date>
-        </div>
-        <div v-for="content in contents" :key="content">
+        <div class="list-wrap" 
+        v-for="content in contents" :key="content">
             <list-memo 
                 :month="content.month" 
                 :memo="content.memo">
@@ -25,121 +21,43 @@ export default {
   components: { ListMemo, Date},
   data () {
     return {
-        dates: [{
-            week: 'SUN'
-        },{
-            week: 'MON'
-        },{
-            week: 'TUE'
-        },{
-            week: 'WED'
-        },{
-            week: 'THU'
-        },{
-            week: 'FRI'
-        },{
-            week: 'SAT'
-        }],
         contents: [{
-            month: '', 
+            month: '1月', 
+            memo: '1月已经过去！'
+        },{
+            month: '2月', 
+            memo: '2月已经过去!'
+        },{
+            month: '3月', 
+            memo: '巩固基础！'
+        },{
+            month: '4月', 
+            memo: ''
+        },{
+            month: '5月', 
+            memo: ''
+        },{
+            month: '6月', 
+            memo: 'C'
+        },{
+            month: '7月', 
+            memo: ''
+        },{
+            month: '8月', 
+            memo: 'B'
+        },{
+            month: '9月', 
             memo: ''
         }, {
-            month: '', 
+            month: '10月', 
             memo: ''
         }, {
-            month: '', 
+            month: '11月', 
             memo: ''
         }, {
-            month: '01', 
+            month: '12月', 
             memo: ''
-        },{
-            month: '02', 
-            memo: 'B'
-        },{
-            month: '03', 
-            memo: ''
-        },{
-            month: '04', 
-            memo: 'A'
-        },{
-            month: '05', 
-            memo: ''
-        },{
-            month: '06', 
-            memo: ''
-        },{
-            month: '07', 
-            memo: 'C'
-        },{
-            month: '08', 
-            memo: ''
-        },{
-            month: '09', 
-            memo: 'B'
-        },{
-            month: '10', 
-            memo: ''
-        },{
-            month: '11', 
-            memo: 'A'
-        },{
-            month: '12', 
-            memo: ''
-        },{
-            month: '13', 
-            memo: ''
-        },{
-            month: '14', 
-            memo: 'C'
-        },{
-            month: '15', 
-            memo: ''
-        },{
-            month: '16', 
-            memo: 'B'
-        },{
-            month: '17', 
-            memo: ''
-        },{
-            month: '18', 
-            memo: 'A'
-        },{
-            month: '19', 
-            memo: ''
-        },{
-            month: '20', 
-            memo: ''
-        },{
-            month: '21', 
-            memo: 'C'
-        },{
-            month: '22', 
-            memo: ''
-        },{
-            month: '23', 
-            memo: 'B'
-        },{
-            month: '24', 
-            memo: ''
-        },{
-            month: '25', 
-            memo: 'A'
-        },{
-            month: '26', 
-            memo: ''
-        },{
-            month: '27', 
-            memo: ''
-        },{
-            month: '28', 
-            memo: 'C'
-          },{
-            month: '29', 
-            memo: ''
-        },{
-            month: '30', 
-            memo: 'B'
-        } ],
+        }],
         list: []
     } 
   },
@@ -154,14 +72,17 @@ export default {
     align-items: flex-start;
 }
 .wrap {
-  width: 1060px;
-  height: 810px;
+  width: 970px;
+  height: 1000px;
   display: flex;
   justify-content: flex-start;
   align-content: flex-start;
   flex-wrap: wrap;
-  background-color:lightpink;
-  border-radius: 1%;
+}
+.list-wrap {
+    flex: 1;
+    position: relative;
+
 }
 
 </style>
